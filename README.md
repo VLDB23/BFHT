@@ -20,6 +20,18 @@ $ make
 $ cd bin
 $ sudo ./PiBench [lib.so] [args...]
 
+#some problem to generate Dash for make command
+eg:
+make[3]: execvp: ../../src/../utils/check-os.sh: Permission denied
+
+solution as follow:
+```
+ $ chmod 777 -R ./hash/Dash/pmdk/utils/check-os.sh
+```
+then reexecute the make command
+```
+$ make
+```
 eg:
 $ sudo ./PiBench ./Dash.so -S 16777216 -r 0 -i 1 -d 0 -t 1 -N 0 -p 200000000
 ```
